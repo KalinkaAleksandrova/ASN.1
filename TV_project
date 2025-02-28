@@ -1,0 +1,27 @@
+BCAS DEFINITIONS ::= BEGIN
+
+TV ::= SEQUENCE {
+    brand PrintableString (SIZE(0..60)),
+    model PrintableString (SIZE(0..60)),
+    color ENUMERATED { black(0), gray(1), white(2) },
+    display-type PrintableString (SIZE(0..60)),
+    size-inches PrintableString (SIZE(0..60)),
+    processor PrintableString (SIZE(0..60)),
+    bluetooth BOOLEAN,
+    wi-fi BOOLEAN,
+    number-of-HDMI INTEGER (SIZE(1..60))
+}
+
+myTV TV ::= {
+    brand "TOSHIBA",
+    model "32WA2063DG/2",
+    color "black",
+    display-type "LED TV",
+    size-inches "55",
+    processor "QUAD CORE",
+    bluetooth TRUE,
+    wi-fi TRUE,
+    number-of-HDMI 3
+}
+
+END
